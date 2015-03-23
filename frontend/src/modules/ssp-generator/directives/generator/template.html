@@ -1,0 +1,18 @@
+<label>Sequence Length:
+  <input type="number" ng-model="sequenceLength">
+</label>
+
+<label>Max Number:
+  <input type="number" ng-model="maxNumber">
+</label>
+
+<button ng-click="generate()">Generate Sequence and Target</button>
+
+
+{{result}}
+
+<label>Enter subset that sums to {{result.target}}:
+  <input type="text" ng-class="{'candidate-error': candidateError}" ng-model="candidate" ng-keyup="sum()">
+  <button ng-click="verify()">Verify</button>
+  Your Sum: {{candidateSum}}
+</label>
